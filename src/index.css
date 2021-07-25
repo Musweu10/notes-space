@@ -1,13 +1,170 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #f3f3f3;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+h3 {
+  text-align: center;
+  margin-bottom: 0;
+  padding-bottom: 15px;
+  color: #232323;
+}
+.container {
+  max-width: 960px;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 0 15px;
+  min-height: 100vh;
+}
+
+/* NEW NOTE SECTION */
+.note.new {
+  background-color: #ff8181;
+  margin-bottom: 20px;
+  color: #fff;
+}
+textarea {
+  border: none;
+  resize: none;
+  font-weight: bold;
+  background-color: #ff8181;
+  color: #fff;
+}
+textarea::placeholder {
+  color: #fff;
+}
+textarea:focus {
+  outline: none;
+}
+textarea:hover {
+  font-size: larger;
+}
+
+/* SAVE BTN */
+.save {
+  background-color: #e1e1e1;
+  border: none;
+  border-radius: 10px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+.save:hover {
+  background-color: #ededed;
+}
+
+/* NOTES SECTION */
+.notes-list {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+.note {
+  background-color: #76c8ff;
+  border-radius: 10px;
+  padding: 1rem;
+  min-height: 170px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  white-space: pre-wrap;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+.note:hover {
+  font-size: larger;
+}
+.note-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* DELETE SECTION */
+.delete-icon {
+  cursor: pointer;
+  color: #4d4d4d;
+}
+.delete-icon:hover {
+  color: #df3f3f;
+  width: 40px;
+  height: 40px;
+}
+
+/* SEARCH SECTION */
+.search {
+  display: flex;
+  align-items: center;
+  background-color: #e1e1e1;
+  border-radius: 10px;
+  padding: 5px;
+  margin-bottom: 1.5em;
+}
+.search input {
+  width: 60rem;
+  border: none;
+  background-color: #e1e1e1;
+}
+.search input:focus {
+  outline: none;
+}
+.search-icon {
+  padding: 2px 5px;
+}
+
+/* MEDIA QUERIES */
+@media only screen and (max-width: 768px) {
+  .search input {
+    width: 20rem;
+    height: 1.3rem;
+  }
+}
+
+/* DARK MODE SECTION */
+.dark-mode {
+  background-color: #232323;
+}
+.dark-mode h1 {
+  color: #ededed;
+}
+.dark-mode h3 {
+  color: #ededed;
+}
+.dark-mode .note {
+  background-color: #b3b3b3;
+}
+.dark-mode .note.new {
+  background-color: #e7e7e7;
+  color: #232323;
+}
+.dark-mode textarea {
+  background-color: #e7e7e7;
+  color: #232323;
+}
+.dark-mode textarea::placeholder {
+  color: #232323;
+}
+.dark-mode .save {
+  background-color: #4d4d4d;
+  color: #e7e7e7;
+}
+.dark-mode .save:hover {
+  background-color: #707070;
+}
+.dark-mode .delete-icon {
+  color: #e7464e;
 }
