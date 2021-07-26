@@ -21,7 +21,7 @@ const App = () => {
   }, [notes]);
 
   const addNote = (text) => {
-    const date =  new Date();
+    const date = new Date();
     const newNote = {
       id: nanoid(),
       text: text,
@@ -49,7 +49,15 @@ const App = () => {
           handleDeleteNote={deleteNote}
         />
         <h3>
-          Created By Musweu Munyima
+          Created By{" "}
+          <a
+            target="_blank"
+            rel="noreferrer"
+            href="https://www.instagram.com/musweu10/"
+          >
+            {" "}
+            Musweu Munyima
+          </a>
           <span>&copy;{currentyear.getFullYear()}</span>
         </h3>
       </div>

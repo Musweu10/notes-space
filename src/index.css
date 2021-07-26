@@ -12,7 +12,21 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
-
+.logo {
+  width: 1.5em;
+  height: 1.5em;
+}
+a {
+  color: #4d4d4d;
+  text-decoration: none;
+}
+a:hover {
+  color: #e7464e;
+}
+h1 {
+  display: flex;
+  /* align-items: center; */
+}
 .header {
   display: flex;
   align-items: center;
@@ -137,6 +151,12 @@ textarea:hover {
 /* DARK MODE SECTION */
 .dark-mode {
   background-color: #232323;
+}
+.dark-mode a {
+  color: #ededed;
+}
+.dark-mode a:hover {
+  color: #df3f3f;
 }
 .dark-mode h1 {
   color: #ededed;
